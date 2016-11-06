@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public class FileManager : MonoBehaviour {
+public class FileManager {
 
 	private const string PATH = "Files/";
 
@@ -15,18 +15,12 @@ public class FileManager : MonoBehaviour {
 
 	public static FileManager Instance
 	{
-		get {return instance;}
-	}
-
-
-	void Awake () 
-	{
-		if (instance == null)
-			instance = this;
-		else if (instance != this)
-			DestroyObject (gameObject);
-		
-		GenerateGame ();
+		get 
+		{
+			if (instance == null)
+				instance = new FileManager ();
+			return instance;
+		}
 	}
 
 	public void GenerateGame()

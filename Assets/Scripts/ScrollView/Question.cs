@@ -10,18 +10,10 @@ public class Question : MonoBehaviour {
 	void Awake () 
 	{
 		question = GetComponentInChildren<Text> ();
-
-
-	
 	}
 
 	void Start()
 	{
 		question.text = FileManager.Instance.GetQuestions () [Globals.value];
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
 	}
 }

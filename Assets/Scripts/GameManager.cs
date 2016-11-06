@@ -19,14 +19,14 @@ public class GameManager : MonoBehaviour
 
 		DontDestroyOnLoad (gameObject);
 
-		FileManager.Instance.GenerateGame ();	
+		FileManager.Instance.GenerateGame ();
 	}
 
 	public void CheckAnswer(AnswerRow value)
 	{
 		if (value.description.text.Equals (FileManager.Instance.GetAnswers () [Globals.value]))
-			Debug.Log ("MUY BIEN");
+			Console.Instance.Write("MUY BIEN");
 		else
-			Debug.Log ("HAS FALLADO");
+			Console.Instance.Write ("HAS FALLADO");
 	}
 }

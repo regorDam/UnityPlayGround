@@ -17,7 +17,7 @@ public class GameManager : MonoBehaviour
 		else if (instance != this)
 			DestroyObject (gameObject);
 
-		DontDestroyOnLoad ();
+		DontDestroyOnLoad (gameObject);
 
 		FileManager.Instance.GenerateGame ();	
 	}
